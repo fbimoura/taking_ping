@@ -7,7 +7,7 @@
   - name: Gravando saída
     set_stats:
       data:
-        resultado: "{{ ping_result.ping }}"
+        resultado: "{{ (ping_result.stdout|from_json).ping }}"
 
   - name: Debugando ping
     debug:
