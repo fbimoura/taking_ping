@@ -6,7 +6,7 @@
     - debug:
         msg: Iniciando teste de ICMP
 
-  role:
+  roles:
     - ping
 
   post_tasks:
