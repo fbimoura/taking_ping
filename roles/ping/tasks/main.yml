@@ -8,7 +8,6 @@
     set_stats:
       data:
         resultado: "{{ ping_result.ping }}"
-      per_host: yes
 
   # - name: Debugando ping
   #   debug:
