@@ -2,13 +2,13 @@
 # tasks file for server_check
   - name: Executando teste
     ping:
-    register: result
+    register: ping_result
 
-  # - name: Gravando saída
-  #   set_stats:
-  #     data:
-  #       resultado: "{{ (ping_result.stdout|from_json).ping }}"
+  - name: Gravando saída
+    set_stats:
+      data:
+        resultado: "{{ (ping_result.stdout|from_json).ping }}"
 
-  - name: Debugando ping
-    debug:
-      msg: "{{ (result.stdout|from_json) }}"
+  # - name: Debugando ping
+  #   debug:
+  #     msg: "{{ (result.stdout|from_json) }}"
