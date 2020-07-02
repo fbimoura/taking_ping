@@ -1,2 +1,9 @@
 ---
 # tasks file for server_check
+  - name: Executando teste
+    ping:
+    register: ping_result
+
+  - name: Debugando ping
+    debug:
+      var: ping_result

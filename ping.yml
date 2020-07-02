@@ -1,0 +1,14 @@
+---
+- name: Teste de conexão com servidores via ICMP
+  hosts: all
+  
+  pre_tasks:
+    - debug:
+        msg: Iniciando teste de ICMP
+
+  role:
+    - ping
+
+  post_tasks:
+    - debug:
+        msg: Encerrando teste de ICMP
