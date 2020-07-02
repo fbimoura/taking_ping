@@ -4,6 +4,11 @@
     ping:
     register: ping_result
 
+  - name: Gravando saída
+    set_stats:
+      data:
+        resultado: "{{ ping_result.ping }}"
+
   - name: Debugando ping
     debug:
-      var: ping_result
+      var: resultado
