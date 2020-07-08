@@ -1,7 +1,6 @@
 ---
 - name: Teste de conexão com servidores via ICMP
   hosts: all
-  gather_facts: False
   
   pre_tasks:
     - debug:
