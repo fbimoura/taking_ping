@@ -9,6 +9,10 @@
       data:
         resultado: "{{ ping_result.ping }}"
 
+  - name: Incluindo captura de hostname
+    include_role:
+      name: hostname
+
   # - name: Debugando ping
   #   debug:
   #     msg: "{{ (result.stdout|from_json) }}"
